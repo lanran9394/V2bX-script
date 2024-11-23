@@ -350,13 +350,6 @@ EOF
                 "outboundTag": "IPv4_out",
                 "type": "field"
             },
-            {
-                "type": "field",
-                "outboundTag": "block",
-                "domain": [
-                    "geosite:cn"
-            ]
-        },
         {
             "outboundTag": "block",
             "domain": [

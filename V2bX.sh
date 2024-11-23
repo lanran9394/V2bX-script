@@ -713,13 +713,6 @@ EOF
                 "type": "field",
                 "outboundTag": "block",
                 "domain": [
-                    "geosite:cn"
-                ]
-            },
-            {
-                "type": "field",
-                "outboundTag": "block",
-                "domain": [
                     "regexp:(api|ps|sv|offnavi|newvector|ulog.imap|newloc)(.map|).(baidu|n.shifen).com",
                     "regexp:(.+.|^)(360|so).(cn|com)",
                     "regexp:(Subject|HELO|SMTP)",
@@ -795,7 +788,6 @@ EOF
       {
         "rule_set": [
           "geosite-category-ads-all",
-          "geosite-cn",
           "geoip-cn"
         ],
         "outbound": "block"
@@ -843,13 +835,6 @@ EOF
         "download_detour": "direct"
       },
       {
-        "tag": "geosite-cn",
-        "type": "remote",
-        "format": "binary",
-        "url": "https://raw.githubusercontent.com/SagerNet/sing-geosite/rule-set/geosite-cn.srs",
-        "download_detour": "direct"
-      },
-      {
         "tag": "geosite-category-ads-all",
         "type": "remote",
         "format": "binary",
@@ -891,7 +876,6 @@ resolver:
 acl:
   inline:
     - direct(geosite:google)
-    - reject(geosite:cn)
     - reject(geoip:cn)
 masquerade:
   type: 404

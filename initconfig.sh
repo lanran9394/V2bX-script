@@ -54,7 +54,7 @@ add_node_config() {
             echo -e "${green}5. Hysteria2${plain}"
         fi
         echo -e "${green}6. Trojan${plain}"  
-        echo -e "${green}7. Trojan${plain}"  
+        echo -e "${green}7. Tuic${plain}"  
         read -rp "请输入：" NodeType
         case "$NodeType" in
             1 ) NodeType="shadowsocks" ;;

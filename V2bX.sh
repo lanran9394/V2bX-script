@@ -887,7 +887,7 @@ show_usage() {
 show_menu() {
     echo -e "
   ${green}V2bX 后端管理脚本，${plain}${red}不适用于docker${plain}
---- https://github.com/Hadia-pixel/V2bX ---
+--- https://github.com/lanran9394/V2bX ---
   ${green}0.${plain} 修改配置
 ————————————————
   ${green}1.${plain} 安装 V2bX
